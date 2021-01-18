@@ -37,55 +37,70 @@
       // Today's date
       $(document).ready(function(){
         var today = moment();
-          $("#currentDay").text(today.format('dddd, MMMM Do YYYY'));
-      })
-             </script>
+        $("#currentDay").text(today.format('dddd, MMMM Do YYYY'));
+      }
+      
+      /* Pseudocode
+      if the time-block is before the current hour, the time-block is gray (this involves setting attribute to the corresponding css class)
+      if the time-block is between :00 and :59 of the current hour, the time-block is red
+      if the time-block is after the current hour, the time-block is green
+
+      $ time-block.attr class=textarea ?  (setting attribute to the div)
+
+      when the save button is clicked, the text-area's input will be saved to local storage
+
+      when the user clicks a gray time-block, the website will alert "Events cannot be scheduled in the past."
+
+      */
+
+      )
+    </script>
 
     <div class="container">
-      <!-- Timeblocks go here -->
-      <div class="row" id="row">
+      <!-- Timeblocks  -->
+      <div class="row">
         <div class="col hour">9AM</div>
-        <div class="col-6 time-block">event goes here</div>
-        <div class="col saveBtn">save</div>
+        <div class="col-10 time-block"></div>
+        <div class="col saveBtn"></div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">10AM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">11AM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">12PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">1PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">2PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">3PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">4PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
-      <div class="row" id="row">
+      <div class="row">
         <div class="col hour">5PM</div>
-        <div class="col-6 time-block">event goes here</div>
+        <div class="col-10 time-block">event goes here</div>
         <div class="col saveBtn">save</div>
       </div>
 
