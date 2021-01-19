@@ -1,74 +1,44 @@
 
-// default setting for whether or not a block has been scheduled - might not need this
-var isScheduled = false;
-
 // gets the current time and sets it to a variable
 var currentTime = moment();
 currentTime = currentTime.format('LT');
 
-// the array of objects for local storage, leaving the event open by default
-// var daySchedule = [
-//     {hour: "9 am",
-//     event: ""},
-
-//     {hour: "10 am",
-//     event: ""},
-
-//     {hour: "11 am",
-//     event: ""},
-
-//     {hour: "12 pm",
-//     event: ""},
-
-//     {hour: "1 pm",
-//     event: ""},
-
-//     {hour: "2 pm",
-//     event: ""},
-
-//     {hour: "3 pm",
-//     event: ""},
-
-//     {hour: "4 pm",
-//     event: ""},
-
-//     {hour: "5 pm",
-//     event: ""}
-// ]
+// writes scheduled tasks to the textarea in case of accidental refreshes
+$("#nine").text(localStorage.getItem("9am"))
+$("#ten").text(localStorage.getItem("10am"))
+$("#eleven").text(localStorage.getItem("11am"))
+$("#twelve").text(localStorage.getItem("12pm"))
+$("#one").text(localStorage.getItem("1pm"))
+$("#two").text(localStorage.getItem("2pm"))
+$("#three").text(localStorage.getItem("3pm"))
+$("#four").text(localStorage.getItem("4pm"))
+$("#five").text(localStorage.getItem("5pm"))
 
 // save buttons - gets the scheduled tasks and saves them to local storage
 $('.save9').click(function(){
     localStorage.setItem("9am", $("#nine").val())
 })
-
 $('.save10').click(function(){
     localStorage.setItem("10am", $("#ten").val())
 })
-
 $('.save11').click(function(){
     localStorage.setItem("11am", $("#eleven").val())
 })
-
 $('.save12').click(function(){
     localStorage.setItem("12pm", $("#twelve").val())
 })
-
 $('.save1').click(function(){
     localStorage.setItem("1pm", $("#one").val())
 })
-
 $('.save2').click(function(){
     localStorage.setItem("2pm", $("#two").val())
 })
-
 $('.save3').click(function(){
     localStorage.setItem("3pm", $("#three").val())
 })
-
 $('.save4').click(function(){
     localStorage.setItem("4pm", $("#four").val())
 })
-
 $('.save5').click(function(){
     localStorage.setItem("5pm", $("#five").val())
 })
