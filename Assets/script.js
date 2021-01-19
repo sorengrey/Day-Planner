@@ -1,9 +1,27 @@
+// array of div ids as strings (to be matched against numHours)
+var divNames = ['nine','ten','eleven','twelve','one','two','three','four','five']
 
-// gets the current time and sets it to a variable
-var currentTime = moment();
-currentTime = currentTime.format('LT');
+// array of hours in military time (to match a numerical value to divNames's strings)
+var numHours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-// writes scheduled tasks to the textarea in case of accidental refreshes
+// the current hour in military time
+var thisHour = moment().format("H");
+
+// loop through divNames
+ for (i=0; i < divNames.length; i++){
+    // if the div's number is higher than the current hour, add the classname 'past' to the div with the matching class
+    if(numHours[i] < thisHour) {
+        $('#' + divNames[i]).addClass('past')
+    // if the div's number is lower than the current hour, add the classname 'future' to the div with the matching class
+    } else if(numHours[i] > thisHour) {
+        $('#' + divNames[i]).addClass('future')
+    // in all other cases, add the classname 'present' to the remaining class
+    } else {
+        $('#' + divNames[i]).addClass('present')
+    }
+ }
+
+// writes saved tasks to the textarea in case of accidental refreshes
 $("#nine").text(localStorage.getItem("9am"))
 $("#ten").text(localStorage.getItem("10am"))
 $("#eleven").text(localStorage.getItem("11am"))
@@ -14,7 +32,7 @@ $("#three").text(localStorage.getItem("3pm"))
 $("#four").text(localStorage.getItem("4pm"))
 $("#five").text(localStorage.getItem("5pm"))
 
-// save buttons - gets the scheduled tasks and saves them to local storage
+// save buttons - saves the tasks to local storage when clicked
 $('.save9').click(function(){
     localStorage.setItem("9am", $("#nine").val())
 })
@@ -43,30 +61,9 @@ $('.save5').click(function(){
     localStorage.setItem("5pm", $("#five").val())
 })
 
-// variable for whether or not thedivhour and current hour match, returns a boolean
-var theDivHour; //use parseInt to get the integer from the string in the div's id(?)
-
-var inTheHour; //moment('thedivhour').isSame('currentTime', 'hour');
-
-//variable for a div in the past, returns a boolean
-var inThePast; //moment('thedivhour').isBefore('currentTime', 'hour')
-
-//variable for a div in the future, returns a boolean
-var inTheFuture; //moment('thedivhour').isAfter('currentTime', 'hour') 
-
-// prevents the user from scheduling events in the gray divs -- untested
+// checks to make sure the user wants to schedule in a gray timeblock
 $("#past").on('click', function(){
-    alert('Events cannot be scheduled in the past.')
-    // needs to disable the text area (check Bootstrap for disabled textarea classname)
+    alert('Are you sure you want to schedule a task in the past?')
 })
 
 
-// color code functionality -- (hour is just a placeholder param)
-//function colorCode(hour) {
-
-// if inThePast = true, the classname is set to #past with .attr
-
-// if inTheHour = true, the classname is set to #present with .attr
-
-// if inTheFuture = true, the classname is set to #future with .attr
-// }
