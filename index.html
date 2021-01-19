@@ -38,71 +38,64 @@
       $(document).ready(function(){
         var today = moment();
         $("#currentDay").text(today.format('dddd, MMMM Do YYYY'));
-      }
-      
-      /* Pseudocode
-      if the time-block is before the current hour, the time-block is gray (this involves setting attribute to the corresponding css class)
-      if the time-block is between :00 and :59 of the current hour, the time-block is red
-      if the time-block is after the current hour, the time-block is green
-
-      $ time-block.attr class=textarea ?  (setting attribute to the div)
-
-      when the save button is clicked, the text-area's input will be saved to local storage
-
-      when the user clicks a gray time-block, the website will alert "Events cannot be scheduled in the past."
-
-      */
-
-      )
+      })
     </script>
+
+    <!-- centers the save icon -->
+   <style>
+      .center {
+        text-align: center;
+      }
+    </style>
 
     <div class="container">
       <!-- Timeblocks  -->
-      <div class="row time-block">
-        <div class="col-1 hour">9AM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col-1 saveBtn"></div>
+      <div class="row">
+        <div class="col hour">9AM</div>
+        <textarea class="col-10" id="nine"></textarea>
+        <div class="col saveBtn fas fa-save center save9"></div>
       </div>
       <div class="row">
         <div class="col hour">10AM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="ten"></textarea>
+        <div class="col saveBtn fas fa-save center save10"></div>
       </div>
       <div class="row">
         <div class="col hour">11AM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="eleven"></textarea>
+        <div class="col saveBtn fas fa-save center save11"></div>
       </div>
       <div class="row">
         <div class="col hour">12PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="twelve"></textarea>
+        <div class="col saveBtn fas fa-save center save12"></div>
       </div>
       <div class="row">
         <div class="col hour">1PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="one"></textarea>
+        <div class="col saveBtn fas fa-save center save1"></div>
       </div>
       <div class="row">
         <div class="col hour">2PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="two"></textarea>
+        <div class="col saveBtn fas fa-save center save2"></div>
       </div>
       <div class="row">
         <div class="col hour">3PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="three"></textarea>
+        <div class="col saveBtn fas fa-save center save3"></div>
       </div>
       <div class="row">
         <div class="col hour">4PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="four"></textarea>
+        <div class="col saveBtn fas fa-save center save4"></div>
       </div>
       <div class="row">
         <div class="col hour">5PM</div>
-        <textarea class="col-10"></textarea>
-        <div class="col saveBtn">save</div>
+        <textarea class="col-10" id="five"></textarea>
+        <div class="col saveBtn fas fa-save center save5"></div>
       </div>
+  </div>
 
     <script src="./Assets/script.js"></script>
   </body>
