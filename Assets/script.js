@@ -7,7 +7,7 @@ var numHours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 // the current hour in military time
 var thisHour = moment().format("H");
 
-// loop through divNames
+// loop through divNames and numHours
  for (i=0; i < divNames.length; i++){
     // if the div's number is higher than the current hour, add the classname 'past' to the div with the matching class
     if(numHours[i] < thisHour) {
@@ -59,11 +59,6 @@ $('.save4').click(function(){
 })
 $('.save5').click(function(){
     localStorage.setItem("5pm", $("#five").val())
-})
-
-// checks to make sure the user wants to schedule in a gray timeblock
-$("#past").on('click', function(){
-    alert('Are you sure you want to schedule a task in the past?')
 })
 
 
