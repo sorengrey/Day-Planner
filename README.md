@@ -8,4 +8,5 @@ The timeblocks are color-coded to help the user see which tasks are in the past 
 
 Bootstrap was implemented to build the grid for the timeblocks, and FontAwesome was used to add an icon to the save buttons.
 <br>
+<br>
 [Click here for the live website.](https://sorengrey.github.io/planner_hw/)
